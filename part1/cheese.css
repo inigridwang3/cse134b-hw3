@@ -1,0 +1,90 @@
+/* 
+  Name: Inigrid Wang
+  Repository URL: https://github.com/inigridwang3/cse134b-hw3/
+*/
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  line-height: 1.6;
+  
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem; 
+  color: #4a2c00;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #8c5200;
+  border-bottom: 2px solid #f2e3c6;
+  padding-bottom: 0.3rem;
+}
+
+.latin {
+  font-style: italic;
+}
+
+#warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-left: 5px solid #ffeeba;
+  border-radius: 4px;
+}
+
+blockquote {
+  border: 2px dashed #b5a484; /* Visible border */
+  padding: 1rem 1.5rem;       /* Padding inside the border */
+  margin: 2rem 0;             /* Margin outside the border */
+  background-color: #faf8f5;
+}
+
+a {
+  color: #b57c00;
+  text-decoration: underline;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  background-color: #8c5200;
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+button:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
+}
+
+button {
+  background-color: #8c5200;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #593300;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer p {
+  text-align: left;
+}
+
+footer p {
+  text-align: center;
+}

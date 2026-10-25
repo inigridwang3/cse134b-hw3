@@ -1,20 +1,20 @@
 /* ==========================================================================
-   CSS CUSTOM PROPERTIES (:root)
+   CSS CUSTOM PROPERTIES (:root) - Professional Bright Theme
    ========================================================================== */
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
-  --bg-color: #0f141c;
-  --bg-surface: #171d28;
-  --bg-card: #1e2636;
+  --bg-color: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
   
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
   
-  --accent-primary: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  --border-color: #334155;
+  --accent-primary: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.12);
+  --border-color: #e2e8f0;
   
   --site-max-width: 1100px;
   --spacing-unit: 1.5rem;
@@ -33,9 +33,10 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-color);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================================================================
@@ -44,7 +45,7 @@ body {
 .site-wrapper {
   max-width: var(--site-max-width);
   margin: 0 auto;
-  padding: 2rem var(--spacing-unit);
+  padding: 2.5rem var(--spacing-unit);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -54,23 +55,25 @@ body {
 header {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
 }
 
 header h1 {
   font-size: 2.25rem;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.35rem 0;
   color: var(--text-main);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 header p {
   color: var(--text-muted);
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1.5rem 0;
   font-size: 1.05rem;
+  font-weight: 400;
 }
 
 /* Flexbox Navigation */
@@ -80,9 +83,9 @@ header nav ul {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
+  gap: 0.5rem 1.25rem;
   border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
+  padding-top: 1.25rem;
 }
 
 header nav a {
@@ -90,9 +93,9 @@ header nav a {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
+  transition: all 0.2s ease;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
 }
 
 /* ==========================================================================
@@ -107,14 +110,16 @@ a[target="_blank"] {
 
 /* 2. Descendant Combinator: Styles all paragraph elements living inside a card */
 .project-card p {
-  font-size: 0.95rem;
+  font-size: 0.975rem;
   color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* 3. Child Combinator (>): Direct child paragraphs inside main content wrapper */
 main > p {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   max-width: 75ch;
+  color: var(--text-muted);
 }
 
 /* 4. Adjacent Sibling Combinator (+): Form label immediately following an input */
@@ -125,9 +130,10 @@ input + label, textarea + label {
 
 /* 5. Subsequent Sibling Combinator (~): Headings that follow an introduction banner */
 .intro-banner ~ h3 {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   border-bottom: 2px solid var(--border-color);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  color: var(--text-main);
 }
 
 /* ==========================================================================
@@ -137,32 +143,46 @@ main {
   flex: 1;
 }
 
+main h2 {
+  font-size: 1.75rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
 /* Grid Layout for Portfolios and Cards */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.75rem;
 }
 
 .project-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 1.75rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-primary);
-  box-shadow: 0 10px 25px var(--accent-glow);
+  box-shadow: 0 12px 30px var(--accent-glow);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--text-main);
+  font-size: 1.25rem;
 }
 
 /* Footer */
 footer {
-  margin-top: 3rem;
-  padding: 1.5rem 0;
+  margin-top: 4rem;
+  padding: 2rem 0;
   border-top: 1px solid var(--border-color);
   text-align: center;
   color: var(--text-muted);
@@ -190,41 +210,48 @@ textarea:focus {
 .btn-primary {
   display: inline-block;
   background-color: var(--accent-primary);
-  color: var(--bg-color);
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   padding: 0.6em 1.4em; /* Uses em relative to font-size for local context scaling */
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  background-color: var(--accent-primary);
+  background-color: #4338ca;
+  opacity: 1;
 }
 
 /* Forms layout */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
   max-width: 600px;
   background-color: var(--bg-surface);
-  padding: 2rem;
+  padding: 2.5rem;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
 }
 
 input, textarea {
-  background-color: var(--bg-card);
+  background-color: #f8fafc;
   border: 1px solid var(--border-color);
   color: var(--text-main);
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
   font-family: var(--font-sans);
   font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--accent-primary);
 }
 
 /* ==========================================================================
@@ -236,11 +263,11 @@ input, textarea {
   }
 
   header {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   header nav ul {
